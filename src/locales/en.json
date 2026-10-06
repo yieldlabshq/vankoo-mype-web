@@ -1,0 +1,265 @@
+{
+    "common": {
+        "tagline": "Your liquidity, today.",
+        "signOut": "Sign out",
+        "preferences": {
+            "switchLanguage": "Switch to Spanish",
+            "switchToDark": "Switch to the dark theme",
+            "switchToLight": "Switch to the light theme"
+        },
+        "legal": {
+            "terms": "Terms",
+            "privacy": "Privacy",
+            "help": "Need help?"
+        },
+        "nav": {
+            "home": "Home",
+            "invoices": "Invoices",
+            "wallet": "Wallet",
+            "profile": "Profile"
+        },
+        "topBar": {
+            "searchPlaceholder": "Search Vankoo…",
+            "openMenu": "Open menu"
+        }
+    },
+    "iam": {
+        "fields": {
+            "email": "Email",
+            "password": "Password",
+            "passwordConfirmation": "Confirm password",
+            "showPassword": "Show password",
+            "hidePassword": "Hide password"
+        },
+        "signIn": {
+            "title": "Welcome back",
+            "subtitle": "Sign in to manage your invoices.",
+            "forgotPassword": "Forgot your password?",
+            "submit": "Sign in",
+            "submitting": "Signing in…",
+            "noAccount": "Don't have an account?",
+            "createOne": "Create one"
+        },
+        "signUp": {
+            "title": "Create your account",
+            "subtitle": "Start financing your invoices in minutes.",
+            "passwordHint_one": "At least {{count}} character.",
+            "passwordHint_other": "At least {{count}} characters.",
+            "passwordMismatch": "The passwords do not match.",
+            "acceptTerms": "I accept the Terms and the Privacy Policy.",
+            "submit": "Create account",
+            "submitting": "Creating account…",
+            "haveAccount": "Already have an account?",
+            "signInLink": "Sign in"
+        },
+        "recover": {
+            "back": "Back to sign in",
+            "title": "Recover your password",
+            "subtitle": "Enter your email and we will send you a link to create a new one.",
+            "submit": "Send link",
+            "submitting": "Sending…"
+        },
+        "recoverSent": {
+            "title": "Check your email",
+            "body": "If an account exists for {{email}}, a link will arrive in a few minutes.",
+            "back": "Back to sign in"
+        },
+        "reset": {
+            "title": "Choose a new password",
+            "subtitle": "This is the password you will sign in with from now on.",
+            "submit": "Save password",
+            "submitting": "Saving…",
+            "missingTokenTitle": "This link is incomplete",
+            "missingTokenBody": "The code that identifies it is missing. It may have been cut off when copied; ask for a new one and try again.",
+            "askForAnother": "Ask for another link"
+        },
+        "errors": {
+            "email-already-in-use": "An account with this email already exists.",
+            "invalid-credentials": "Incorrect email or password.",
+            "role-not-allowed": "We could not create your account with that profile type.",
+            "validation-failed": "Check the details: something is not right.",
+            "invalid-request": "Check the details: something is not right.",
+            "user-not-found": "We could not find an account with that email.",
+            "unauthenticated": "Your session expired. Please sign in again.",
+            "forbidden": "Your account is not allowed to do this.",
+            "unreachable": "We could not reach Vankoo. Try again in a few minutes.",
+            "signInFailed": "Incorrect email or password.",
+            "signUpFailed": "We could not create your account. Please try again.",
+            "invalid-password-reset-token": "That link no longer works: it may have expired or already been used. Ask for a new one."
+        }
+    },
+    "invoicing": {
+        "upload": {
+            "title": "Upload invoice",
+            "dropzone": {
+                "cta": "Drag a file here or click to choose one",
+                "hint": "PDF of an electronic invoice"
+            },
+            "helper": "PDF of an electronic invoice issued through SUNAT. We extract the data: you do not have to type anything.",
+            "submitting": "Uploading…",
+            "uploadComplete": "upload complete",
+            "removeFile": "Remove",
+            "afterTitle": "What happens after you upload it",
+            "afterBody": "We read the data, check that it adds up, and validate the invoice with SUNAT. If everything checks out, we publish it so investors can fund it.",
+            "steps": {
+                "received": "Received",
+                "reading": "Reading data",
+                "validating": "Validating with SUNAT",
+                "approved": "Approved",
+                "inAuction": "In auction"
+            },
+            "viewDetail": "View detail",
+            "viewInvoice": "View invoice",
+            "uploadAnother": "Upload another"
+        },
+        "myInvoices": {
+            "title": "Invoices",
+            "uploadInvoice": "Upload invoice",
+            "filters": {
+                "search": "Search",
+                "searchPlaceholder": "RUC or invoice number",
+                "status": "Status",
+                "allStatuses": "All statuses",
+                "dateRange": "Date range",
+                "submit": "Filter"
+            },
+            "columns": {
+                "number": "Invoice",
+                "payer": "Payer",
+                "payerRuc": "Payer RUC",
+                "dueDate": "Due",
+                "status": "Status",
+                "amount": "Amount"
+            },
+            "loading": "Loading invoices…",
+            "empty": {
+                "title": "You do not have any invoices yet",
+                "description": "Upload your first invoice and our system will extract the data automatically."
+            },
+            "noMatches": "No invoice matches these filters.",
+            "resultsSummary_one": "{{count}} result",
+            "resultsSummary_other": "{{count}} results"
+        },
+        "status": {
+            "UPLOADED": "Uploaded",
+            "OCR_PROCESSING": "Reading data",
+            "DATA_EXTRACTED": "Reading data",
+            "CONSISTENCY_PASSED": "Validating with SUNAT",
+            "SUNAT_VALIDATING": "Validating with SUNAT",
+            "SUNAT_VALIDATED": "Validating with SUNAT",
+            "APPROVED": "Approved",
+            "PUBLISHED": "In auction",
+            "REQUIRES_REVIEW": "Requires review",
+            "NOT_ELIGIBLE": "Not eligible",
+            "REJECTED": "Rejected"
+        },
+        "detail": {
+            "back": "Invoices",
+            "loading": "Loading invoice…",
+            "loadFailed": "We could not load this invoice. It may not exist, or there may be a connection problem.",
+            "viewPdf": "View the PDF",
+            "subtitle": "{{payer}} · due {{date}}",
+            "untitled": "Unread invoice",
+            "reviewAlert": {
+                "title": "We need you to review this invoice",
+                "fallbackMessage": "There is something to fix before this can continue."
+            },
+            "notEligibleAlert": {
+                "title": "We cannot fund this invoice",
+                "fallbackMessage": "This invoice does not qualify for funding."
+            },
+            "railCaption": {
+                "received": {
+                    "automatic": "Step 1 of 5 · we recorded that the invoice arrived."
+                },
+                "reading": {
+                    "automatic": "Step 2 of 5 · we are reading the invoice's data. This is automatic.",
+                    "attention": "Stopped at step 2 of 5 · this does not move on its own: someone has to fix it."
+                },
+                "validating": {
+                    "automatic": "Step 3 of 5 · checking with SUNAT that the invoice is legitimate. This is automatic.",
+                    "attention": "Stopped at step 3 of 5 · this does not move on its own: someone has to fix it.",
+                    "blocked": "Dead end · the invoice is readable and its numbers add up, but it is not eligible for funding."
+                },
+                "approved": {
+                    "automatic": "Step 4 of 5 · the invoice was approved and is ready to go to auction.",
+                    "attention": "Step 4 of 5 · review the offer and accept it to publish the invoice."
+                },
+                "inAuction": {
+                    "automatic": "Step 5 of 5 · the invoice is published in the auction.",
+                    "attention": "Stopped at step 5 of 5 · this does not move on its own: someone has to fix it."
+                }
+            },
+            "facts": {
+                "title": "Data we read from the invoice",
+                "unread": "—",
+                "issuer": "Issuer",
+                "issuerRuc": "Issuer RUC",
+                "payer": "Payer",
+                "payerRuc": "Payer RUC",
+                "issuedAt": "Issued",
+                "dueDate": "Due",
+                "currency": "Currency",
+                "fiscalNumber": "Fiscal number"
+            },
+            "settlement": {
+                "grossAmount": "Invoice amount",
+                "pendingFootnote": "You will know how much you receive once the invoice is approved and goes to auction: the discount and the fee are set there."
+            },
+            "lineItems": {
+                "title": "Invoice detail",
+                "description": "Description",
+                "quantity": "Quantity",
+                "unitPrice": "Unit price",
+                "subtotal": "Subtotal"
+            },
+            "totals": {
+                "subtotal": "Subtotal",
+                "igv": "VAT (18%)",
+                "commercialDiscount": "Commercial discount",
+                "total": "Total"
+            }
+        },
+        "errors": {
+            "uploadFailed": "We could not upload the invoice. Please try again."
+        }
+    },
+    "home": {
+        "title": "Signed in",
+        "signedInAs": "You are signed in as <strong>{{email}}</strong>.",
+        "roles": "Roles",
+        "expiresAt": "Session expires",
+        "placeholder": "Placeholder screen. The MYPE dashboard arrives once invoices, profile and wallet are designed."
+    },
+    "notFound": {
+        "code": "Error 404",
+        "title": "This page does not exist",
+        "body": "The link may be misspelled, or the page may have moved.",
+        "back": "Back to home"
+    },
+    "investment": {
+        "offer": {
+            "invoiceAmount": "Invoice amount",
+            "discount": "Discount ({{percentage}}%)",
+            "net": "Net",
+            "fee": "Vankoo fee (incl. IGV)",
+            "receivable": "You receive",
+            "terms": "TCEA {{tcea}}% · {{days}} days · valid until {{validUntil}}",
+            "accept": "Accept and publish",
+            "accepting": "Publishing…",
+            "publishedOn": "Published on {{date}}",
+            "funded": "Funded {{current}} of {{target}}",
+            "dialog": {
+                "title": "Accept the offer and publish the invoice?",
+                "body": "You will receive {{amount}} in your wallet once the auction is funded. Accepting publishes the invoice to the investors, and it cannot be withdrawn from here.",
+                "confirm": "Yes, publish",
+                "cancel": "Cancel"
+            }
+        },
+        "errors": {
+            "quoteNotActive": "This offer is no longer valid. Here is the current one.",
+            "tooCloseToDueDate": "The invoice is due too soon to open an auction.",
+            "unknown": "We could not complete the operation. Please try again."
+        }
+    }
+}
