@@ -1,0 +1,370 @@
+/* Vankoo design tokens — generated from the Figma library.
+   Source of truth: Vankoo Design System (eYSuFRMURTT87GezMWFv6J).
+   Regenerate rather than hand-edit. */
+
+:root {
+  /* ---- Primitives: raw ramps. Components must not use these directly. ---- */
+  --vk-green-50: #EAF9F2;
+  --vk-green-100: #D6F2E6;
+  --vk-green-200: #B4E8D2;
+  --vk-green-300: #7DDBB7;
+  --vk-green-400: #00C897;
+  --vk-green-500: #00B87E;
+  --vk-green-600: #009D65;
+  --vk-green-700: #00804F;
+  --vk-green-800: #006039;
+  --vk-green-900: #003E21;
+  --vk-green-950: #002812;
+  --vk-navy-50: #F0F6FC;
+  --vk-navy-100: #E2ECF7;
+  --vk-navy-200: #CBDCF0;
+  --vk-navy-300: #ABC8E9;
+  --vk-navy-400: #89B2E1;
+  --vk-navy-500: #669AD3;
+  --vk-navy-600: #4D80B8;
+  --vk-navy-700: #396698;
+  --vk-navy-800: #274C74;
+  --vk-navy-900: #0E2A47;
+  --vk-navy-950: #071D33;
+  --vk-gray-50: #EFF6FD;
+  --vk-gray-100: #E5EBF3;
+  --vk-gray-200: #D5DBE2;
+  --vk-gray-300: #BFC5CC;
+  --vk-gray-400: #A9AFB6;
+  --vk-gray-500: #91969D;
+  --vk-gray-600: #787D84;
+  --vk-gray-700: #5F646B;
+  --vk-gray-800: #454A50;
+  --vk-gray-900: #2A2E34;
+  --vk-gray-950: #181C21;
+  --vk-indigo-50: #F1F4FF;
+  --vk-indigo-100: #E4E9FF;
+  --vk-indigo-200: #CFD7FF;
+  --vk-indigo-300: #B2BEFF;
+  --vk-indigo-400: #96A2FF;
+  --vk-indigo-500: #7B82FF;
+  --vk-indigo-600: #6366F1;
+  --vk-indigo-700: #4F4FCB;
+  --vk-indigo-800: #39389D;
+  --vk-indigo-900: #22206B;
+  --vk-indigo-950: #141049;
+  --vk-amber-50: #FEF3E7;
+  --vk-amber-100: #FBE7D0;
+  --vk-amber-200: #F7D3AB;
+  --vk-amber-300: #F4B870;
+  --vk-amber-400: #F59E0B;
+  --vk-amber-500: #E27600;
+  --vk-amber-600: #C55B00;
+  --vk-amber-700: #A44500;
+  --vk-amber-800: #7D3000;
+  --vk-amber-900: #531900;
+  --vk-amber-950: #370B00;
+  --vk-red-50: #FFF0EE;
+  --vk-red-100: #FFE2DE;
+  --vk-red-200: #FFCAC4;
+  --vk-red-300: #FFA79F;
+  --vk-red-400: #FF7F77;
+  --vk-red-500: #EF4444;
+  --vk-red-600: #DD3135;
+  --vk-red-700: #B81823;
+  --vk-red-800: #8D0514;
+  --vk-red-900: #5F0005;
+  --vk-red-950: #400000;
+  --vk-base-white: #FFFFFF;
+  --vk-base-black: #000000;
+  --vk-base-transparent: transparent;
+  --vk-shadow-navy-08: #092C4C14;
+  --vk-shadow-navy-12: #092C4C1F;
+  --vk-shadow-navy-20: #092C4C33;
+
+  --vk-space-0: 0px;
+  --vk-space-2: 2px;
+  --vk-space-4: 4px;
+  --vk-space-8: 8px;
+  --vk-space-12: 12px;
+  --vk-space-16: 16px;
+  --vk-space-24: 24px;
+  --vk-space-32: 32px;
+  --vk-space-40: 40px;
+  --vk-space-48: 48px;
+  --vk-space-56: 56px;
+  --vk-space-64: 64px;
+  --vk-space-80: 80px;
+  --vk-space-96: 96px;
+  --vk-space-120: 120px;
+  --vk-radius-none: 0px;
+  --vk-radius-sm: 4px;
+  --vk-radius-md: 8px;
+  --vk-radius-lg: 12px;
+  --vk-radius-xl: 16px;
+  --vk-radius-full: 9999px;
+  /* Widths are namespaced because Figma keeps border/focus in two different
+     collections — a float in Primitives and a colour in Theme. They coexist
+     there; flattened into custom properties on one :root they collide, and the
+     later declaration silently wins. */
+  --vk-border-width-hairline: 1px;
+  --vk-border-width-thick: 2px;
+  --vk-border-width-focus: 3px;
+
+  --vk-family-app: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  --vk-family-display: "Poppins", system-ui, sans-serif;
+
+  /* Font weights. Figma stores these as face names ("SemiBold"); CSS needs the
+     numeric axis, so the mapping happens here rather than in each component. */
+  --vk-weight-regular: 400;
+  --vk-weight-medium: 500;
+  --vk-weight-semibold: 600;
+  --vk-weight-bold: 700;
+  --vk-weight-extrabold: 800;
+
+  /* Elevation, matching Elevation/1..3 in the Figma library. Each level stacks
+     two shadows exactly as the Figma effect style does — CSS can express that
+     directly, unlike Compose, which models one shadow per surface.
+
+     Tinted with the brand navy rather than black: pure black dirties a
+     blue-leaning surface. In dark mode prefer raising the surface
+     (surface/raised over surface/base) — a shadow barely reads on a dark
+     ground. */
+  --vk-elevation-1: 0 1px 2px rgb(9 44 76 / 0.06), 0 2px 6px rgb(9 44 76 / 0.04);
+  --vk-elevation-2: 0 2px 4px rgb(9 44 76 / 0.08), 0 6px 14px rgb(9 44 76 / 0.06);
+  --vk-elevation-3: 0 8px 16px rgb(9 44 76 / 0.10), 0 16px 32px rgb(9 44 76 / 0.12);
+
+  /* ---- Theme: light. The .dark block below overrides only these. ---- */
+  --vk-surface-base: #EFF6FD;
+  --vk-surface-raised: #FFFFFF;
+  --vk-surface-overlay: #FFFFFF;
+  --vk-surface-sunken: #E5EBF3;
+  --vk-surface-inverse: #0E2A47;
+  --vk-text-primary: #0E2A47;
+  --vk-text-secondary: #5F646B;
+  --vk-text-muted: #787D84;
+  --vk-text-disabled: #A9AFB6;
+  --vk-text-inverse: #FFFFFF;
+  --vk-text-on-action: #0E2A47;
+  --vk-text-link: #00804F;
+  --vk-text-secondary-on-inverse: #ABC8E9;
+  --vk-border-subtle: #D5DBE2;
+  --vk-border-default: #BFC5CC;
+  --vk-border-strong: #787D84;
+  --vk-border-focus: #009D65;
+  --vk-action-primary-bg: #00C897;
+  --vk-action-primary-bg-hover: #00B87E;
+  --vk-action-primary-bg-active: #009D65;
+  --vk-action-primary-fg: #0E2A47;
+  --vk-action-secondary-bg: #0E2A47;
+  --vk-action-secondary-bg-hover: #274C74;
+  --vk-action-secondary-bg-active: #396698;
+  --vk-action-secondary-fg: #FFFFFF;
+  --vk-action-ghost-bg: transparent;
+  --vk-action-ghost-bg-hover: #E5EBF3;
+  --vk-action-ghost-fg: #0E2A47;
+  --vk-action-danger-bg: #DD3135;
+  --vk-action-danger-bg-hover: #B81823;
+  --vk-action-danger-fg: #FFFFFF;
+  --vk-action-disabled-bg: #D5DBE2;
+  --vk-action-disabled-fg: #A9AFB6;
+  --vk-state-success-fg: #00804F;
+  --vk-state-success-bg: #EAF9F2;
+  --vk-state-success-border: #7DDBB7;
+  --vk-state-warning-fg: #A44500;
+  --vk-state-warning-bg: #FEF3E7;
+  --vk-state-warning-border: #F4B870;
+  --vk-state-error-fg: #B81823;
+  --vk-state-error-bg: #FFF0EE;
+  --vk-state-error-border: #FFA79F;
+  --vk-finance-positive-fg: #00804F;
+  --vk-finance-negative-fg: #B81823;
+  --vk-finance-neutral-fg: #5F646B;
+  --vk-finance-positive-on-inverse: #7DDBB7;
+  --vk-finance-negative-on-inverse: #FFA79F;
+  --vk-finance-neutral-on-inverse: #BFC5CC;
+  --vk-risk-a-fg: #00804F;
+  --vk-risk-a-bg: #EAF9F2;
+  --vk-risk-b-fg: #A44500;
+  --vk-risk-b-bg: #FEF3E7;
+  --vk-risk-c-fg: #B81823;
+  --vk-risk-c-bg: #FFF0EE;
+  --vk-accent-ai-fg: #4F4FCB;
+  --vk-accent-ai-bg: #F1F4FF;
+  --vk-accent-ai-border: #CFD7FF;
+  --vk-accent-green-finance-fg: #006039;
+  --vk-accent-green-finance-bg: #D6F2E6;
+  --vk-avatar-bg: #E2ECF7;
+  --vk-avatar-fg: #396698;
+
+  /* Decoration for fixed-brand surfaces. The panel is navy in BOTH modes, like
+     the Logo, so its four tokens do not flip — only the dot does, because it
+     sits on surface/base. Opacity is not a token: the brand green stays under
+     20% with a 200px+ blur, and that ceiling is a written rule, not enforced. */
+  --vk-decor-panel-from: #274C74;
+  --vk-decor-panel-to: #071D33;
+  --vk-decor-panel-fg: #FFFFFF;
+  --vk-decor-light-primary: #00C897;
+  --vk-decor-light-secondary: #00B87E;
+  --vk-decor-dot: #BFC5CC;
+  --vk-status-uploaded-fg: #5F646B;
+  --vk-status-uploaded-bg: #E5EBF3;
+  --vk-status-ocr-processing-fg: #4F4FCB;
+  --vk-status-ocr-processing-bg: #F1F4FF;
+  --vk-status-sunat-validating-fg: #4F4FCB;
+  --vk-status-sunat-validating-bg: #F1F4FF;
+  --vk-status-data-extracted-fg: #396698;
+  --vk-status-data-extracted-bg: #E2ECF7;
+  --vk-status-consistency-passed-fg: #396698;
+  --vk-status-consistency-passed-bg: #E2ECF7;
+  --vk-status-sunat-validated-fg: #396698;
+  --vk-status-sunat-validated-bg: #E2ECF7;
+  --vk-status-approved-fg: #00804F;
+  --vk-status-approved-bg: #EAF9F2;
+  --vk-status-published-fg: #006039;
+  --vk-status-published-bg: #D6F2E6;
+  --vk-status-requires-review-fg: #A44500;
+  --vk-status-requires-review-bg: #FEF3E7;
+  --vk-status-not-eligible-fg: #2A2E34;
+  --vk-status-not-eligible-bg: #D5DBE2;
+  --vk-status-rejected-fg: #B81823;
+  --vk-status-rejected-bg: #FFF0EE;
+
+  /* ---- Density: desktop. The media query below overrides only these. ---- */
+  --vk-text-display-size: 56px;
+  --vk-text-display-lh: 68px;
+  --vk-text-h1-size: 32px;
+  --vk-text-h1-lh: 40px;
+  --vk-text-h2-size: 24px;
+  --vk-text-h2-lh: 30px;
+  --vk-text-h3-size: 20px;
+  --vk-text-h3-lh: 26px;
+  --vk-text-body-lg-size: 18px;
+  --vk-text-body-lg-lh: 27px;
+  --vk-text-body-size: 15px;
+  --vk-text-body-lh: 22px;
+  --vk-text-caption-size: 13px;
+  --vk-text-caption-lh: 18px;
+  --vk-text-overline-size: 11px;
+  --vk-text-overline-lh: 16px;
+  --vk-control-height-sm: 32px;
+  --vk-control-height-md: 40px;
+  --vk-control-height-lg: 48px;
+  --vk-control-padding-x: 16px;
+  --vk-touch-min: 32px;
+  --vk-space-gutter: 24px;
+  --vk-space-section: 48px;
+  --vk-space-card-padding: 24px;
+  --vk-space-page-margin: 32px;
+}
+
+.dark {
+  --vk-surface-base: #071D33;
+  --vk-surface-raised: #0E2A47;
+  --vk-surface-overlay: #0E2A47;
+  --vk-surface-sunken: #071D33;
+  --vk-surface-inverse: #FFFFFF;
+  --vk-text-primary: #E5EBF3;
+  --vk-text-secondary: #BFC5CC;
+  --vk-text-muted: #A9AFB6;
+  --vk-text-disabled: #5F646B;
+  --vk-text-inverse: #071D33;
+  --vk-text-on-action: #071D33;
+  --vk-text-link: #7DDBB7;
+  --vk-text-secondary-on-inverse: #5F646B;
+  --vk-border-subtle: #274C74;
+  --vk-border-default: #454A50;
+  --vk-border-strong: #787D84;
+  --vk-border-focus: #00C897;
+  --vk-action-primary-bg: #00C897;
+  --vk-action-primary-bg-hover: #7DDBB7;
+  --vk-action-primary-bg-active: #00B87E;
+  --vk-action-primary-fg: #071D33;
+  --vk-action-secondary-bg: #396698;
+  --vk-action-secondary-bg-hover: #4D80B8;
+  --vk-action-secondary-bg-active: #4D80B8;
+  --vk-action-secondary-fg: #E5EBF3;
+  --vk-action-ghost-bg: transparent;
+  --vk-action-ghost-bg-hover: #274C74;
+  --vk-action-ghost-fg: #E5EBF3;
+  --vk-action-danger-bg: #DD3135;
+  --vk-action-danger-bg-hover: #EF4444;
+  --vk-action-danger-fg: #FFFFFF;
+  --vk-action-disabled-bg: #2A2E34;
+  --vk-action-disabled-fg: #5F646B;
+  --vk-state-success-fg: #7DDBB7;
+  --vk-state-success-bg: #003E21;
+  --vk-state-success-border: #00804F;
+  --vk-state-warning-fg: #F4B870;
+  --vk-state-warning-bg: #531900;
+  --vk-state-warning-border: #A44500;
+  --vk-state-error-fg: #FFA79F;
+  --vk-state-error-bg: #5F0005;
+  --vk-state-error-border: #B81823;
+  --vk-finance-positive-fg: #7DDBB7;
+  --vk-finance-negative-fg: #FFA79F;
+  --vk-finance-neutral-fg: #BFC5CC;
+  --vk-finance-positive-on-inverse: #00804F;
+  --vk-finance-negative-on-inverse: #B81823;
+  --vk-finance-neutral-on-inverse: #5F646B;
+  --vk-risk-a-fg: #7DDBB7;
+  --vk-risk-a-bg: #003E21;
+  --vk-risk-b-fg: #F4B870;
+  --vk-risk-b-bg: #531900;
+  --vk-risk-c-fg: #FFA79F;
+  --vk-risk-c-bg: #5F0005;
+  --vk-accent-ai-fg: #B2BEFF;
+  --vk-accent-ai-bg: #22206B;
+  --vk-accent-ai-border: #4F4FCB;
+  --vk-accent-green-finance-fg: #B4E8D2;
+  --vk-accent-green-finance-bg: #003E21;
+  --vk-avatar-bg: #274C74;
+  --vk-avatar-fg: #CBDCF0;
+
+  /* Only the dot flips: it lives on surface/base. decor/panel-* and panel-fg are
+     fixed on purpose — a fixed surface needs a fixed foreground, or the text
+     goes navy-on-navy (1.92:1). */
+  --vk-decor-dot: #274C74;
+  --vk-status-uploaded-fg: #BFC5CC;
+  --vk-status-uploaded-bg: #2A2E34;
+  --vk-status-ocr-processing-fg: #B2BEFF;
+  --vk-status-ocr-processing-bg: #22206B;
+  --vk-status-sunat-validating-fg: #B2BEFF;
+  --vk-status-sunat-validating-bg: #22206B;
+  --vk-status-data-extracted-fg: #ABC8E9;
+  --vk-status-data-extracted-bg: #274C74;
+  --vk-status-consistency-passed-fg: #ABC8E9;
+  --vk-status-consistency-passed-bg: #274C74;
+  --vk-status-sunat-validated-fg: #ABC8E9;
+  --vk-status-sunat-validated-bg: #274C74;
+  --vk-status-approved-fg: #7DDBB7;
+  --vk-status-approved-bg: #003E21;
+  --vk-status-published-fg: #B4E8D2;
+  --vk-status-published-bg: #003E21;
+  --vk-status-requires-review-fg: #F4B870;
+  --vk-status-requires-review-bg: #531900;
+  --vk-status-not-eligible-fg: #A9AFB6;
+  --vk-status-not-eligible-bg: #2A2E34;
+  --vk-status-rejected-fg: #FFA79F;
+  --vk-status-rejected-bg: #5F0005;
+}
+
+/* Density on the web is a breakpoint, not a mode: the Figma collection's
+   Mobile mode maps to anything narrower than the md breakpoint. */
+@media (width < 48rem) {
+  :root {
+    --vk-text-display-size: 36px;
+    --vk-text-display-lh: 44px;
+    --vk-text-h1-size: 26px;
+    --vk-text-h1-lh: 32px;
+    --vk-text-h2-size: 20px;
+    --vk-text-h2-lh: 26px;
+    --vk-text-h3-size: 18px;
+    --vk-text-h3-lh: 24px;
+    --vk-text-body-size: 16px;
+    --vk-text-body-lh: 24px;
+    --vk-control-height-sm: 40px;
+    --vk-control-height-md: 44px;
+    --vk-control-height-lg: 56px;
+    --vk-touch-min: 44px;
+    --vk-space-gutter: 16px;
+    --vk-space-section: 32px;
+    --vk-space-card-padding: 16px;
+    --vk-space-page-margin: 16px;
+  }
+}

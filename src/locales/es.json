@@ -1,0 +1,265 @@
+{
+    "common": {
+        "tagline": "Tu liquidez, hoy.",
+        "signOut": "Cerrar sesión",
+        "preferences": {
+            "switchLanguage": "Cambiar a inglés",
+            "switchToDark": "Cambiar al tema oscuro",
+            "switchToLight": "Cambiar al tema claro"
+        },
+        "legal": {
+            "terms": "Términos",
+            "privacy": "Privacidad",
+            "help": "¿Necesitas ayuda?"
+        },
+        "nav": {
+            "home": "Inicio",
+            "invoices": "Facturas",
+            "wallet": "Billetera",
+            "profile": "Perfil"
+        },
+        "topBar": {
+            "searchPlaceholder": "Buscar en Vankoo…",
+            "openMenu": "Abrir menú"
+        }
+    },
+    "iam": {
+        "fields": {
+            "email": "Correo",
+            "password": "Contraseña",
+            "passwordConfirmation": "Confirmar contraseña",
+            "showPassword": "Mostrar contraseña",
+            "hidePassword": "Ocultar contraseña"
+        },
+        "signIn": {
+            "title": "Bienvenido de vuelta",
+            "subtitle": "Ingresa para gestionar tus facturas.",
+            "forgotPassword": "¿Olvidaste tu contraseña?",
+            "submit": "Ingresar",
+            "submitting": "Ingresando…",
+            "noAccount": "¿No tienes cuenta?",
+            "createOne": "Crea una"
+        },
+        "signUp": {
+            "title": "Crea tu cuenta",
+            "subtitle": "Empieza a financiar tus facturas en minutos.",
+            "passwordHint_one": "Mínimo {{count}} carácter.",
+            "passwordHint_other": "Mínimo {{count}} caracteres.",
+            "passwordMismatch": "Las contraseñas no coinciden.",
+            "acceptTerms": "Acepto los Términos y la Política de Privacidad.",
+            "submit": "Crear cuenta",
+            "submitting": "Creando cuenta…",
+            "haveAccount": "¿Ya tienes cuenta?",
+            "signInLink": "Inicia sesión"
+        },
+        "recover": {
+            "back": "Volver a iniciar sesión",
+            "title": "Recupera tu contraseña",
+            "subtitle": "Escribe tu correo y te enviaremos un enlace para crear una nueva.",
+            "submit": "Enviar enlace",
+            "submitting": "Enviando…"
+        },
+        "recoverSent": {
+            "title": "Revisa tu correo",
+            "body": "Si existe una cuenta con {{email}}, te llegará un enlace en unos minutos.",
+            "back": "Volver a iniciar sesión"
+        },
+        "reset": {
+            "title": "Elige una contraseña nueva",
+            "subtitle": "Será la contraseña con la que entres a partir de ahora.",
+            "submit": "Guardar contraseña",
+            "submitting": "Guardando…",
+            "missingTokenTitle": "Este enlace está incompleto",
+            "missingTokenBody": "Le falta el código que lo identifica. Puede que se haya cortado al copiarlo; pide uno nuevo y vuelve a intentarlo.",
+            "askForAnother": "Pedir otro enlace"
+        },
+        "errors": {
+            "email-already-in-use": "Ya existe una cuenta con este correo.",
+            "invalid-credentials": "Correo o contraseña incorrectos.",
+            "role-not-allowed": "No pudimos crear tu cuenta con ese tipo de perfil.",
+            "validation-failed": "Revisa los datos: hay algo que no está bien.",
+            "invalid-request": "Revisa los datos: hay algo que no está bien.",
+            "user-not-found": "No encontramos ninguna cuenta con ese correo.",
+            "unauthenticated": "Tu sesión expiró. Vuelve a iniciar sesión.",
+            "forbidden": "Tu cuenta no tiene permiso para hacer esto.",
+            "unreachable": "No pudimos conectar con Vankoo. Inténtalo en unos minutos.",
+            "signInFailed": "Correo o contraseña incorrectos.",
+            "signUpFailed": "No pudimos crear tu cuenta. Inténtalo de nuevo.",
+            "invalid-password-reset-token": "Ese enlace ya no sirve: puede haber caducado o haberse usado. Pide uno nuevo."
+        }
+    },
+    "invoicing": {
+        "upload": {
+            "title": "Subir factura",
+            "dropzone": {
+                "cta": "Arrastra el archivo o haz clic para elegirlo",
+                "hint": "PDF de factura electrónica"
+            },
+            "helper": "PDF de una factura electrónica emitida en SUNAT. Nosotros extraemos los datos: no tienes que escribir nada.",
+            "submitting": "Subiendo…",
+            "uploadComplete": "subida completa",
+            "removeFile": "Quitar",
+            "afterTitle": "Qué pasa después de subirla",
+            "afterBody": "Leemos los datos, comprobamos que cuadren y validamos la factura con SUNAT. Si todo va bien, la publicamos para que los inversionistas la financien.",
+            "steps": {
+                "received": "Recibida",
+                "reading": "Leyendo datos",
+                "validating": "Validando con SUNAT",
+                "approved": "Aprobada",
+                "inAuction": "En subasta"
+            },
+            "viewDetail": "Ver detalle",
+            "viewInvoice": "Ver la factura",
+            "uploadAnother": "Subir otra"
+        },
+        "myInvoices": {
+            "title": "Facturas",
+            "uploadInvoice": "Subir factura",
+            "filters": {
+                "search": "Buscar",
+                "searchPlaceholder": "RUC o N° de factura",
+                "status": "Estado",
+                "allStatuses": "Todos los estados",
+                "dateRange": "Rango de fecha",
+                "submit": "Filtrar"
+            },
+            "columns": {
+                "number": "Factura",
+                "payer": "Pagador",
+                "payerRuc": "RUC del pagador",
+                "dueDate": "Vence",
+                "status": "Estado",
+                "amount": "Importe"
+            },
+            "loading": "Cargando facturas…",
+            "empty": {
+                "title": "Aún no tienes facturas",
+                "description": "Sube tu primera factura y nuestro sistema extraerá los datos automáticamente."
+            },
+            "noMatches": "Ninguna factura coincide con estos filtros.",
+            "resultsSummary_one": "{{count}} resultado",
+            "resultsSummary_other": "{{count}} resultados"
+        },
+        "status": {
+            "UPLOADED": "Subida",
+            "OCR_PROCESSING": "Leyendo datos",
+            "DATA_EXTRACTED": "Leyendo datos",
+            "CONSISTENCY_PASSED": "Validando con SUNAT",
+            "SUNAT_VALIDATING": "Validando con SUNAT",
+            "SUNAT_VALIDATED": "Validando con SUNAT",
+            "APPROVED": "Aprobada",
+            "PUBLISHED": "En subasta",
+            "REQUIRES_REVIEW": "Requiere revisión",
+            "NOT_ELIGIBLE": "No elegible",
+            "REJECTED": "Rechazada"
+        },
+        "detail": {
+            "back": "Facturas",
+            "loading": "Cargando factura…",
+            "loadFailed": "No pudimos cargar esta factura. Puede que no exista o que haya un problema de conexión.",
+            "viewPdf": "Ver el PDF",
+            "subtitle": "{{payer}} · vence el {{date}}",
+            "untitled": "Factura sin leer",
+            "reviewAlert": {
+                "title": "Necesitamos que revises esta factura",
+                "fallbackMessage": "Hay algo que corregir antes de continuar."
+            },
+            "notEligibleAlert": {
+                "title": "No podemos financiar esta factura",
+                "fallbackMessage": "Esta factura no califica para financiamiento."
+            },
+            "railCaption": {
+                "received": {
+                    "automatic": "Paso 1 de 5 · registramos que la factura llegó."
+                },
+                "reading": {
+                    "automatic": "Paso 2 de 5 · estamos leyendo los datos de la factura. Es automático.",
+                    "attention": "Parada en el paso 2 de 5 · esto no avanza solo: hace falta que alguien lo corrija."
+                },
+                "validating": {
+                    "automatic": "Paso 3 de 5 · consultando SUNAT para verificar que la factura es legítima. Es automático.",
+                    "attention": "Parada en el paso 3 de 5 · esto no avanza solo: hace falta que alguien lo corrija.",
+                    "blocked": "Sin salida · la factura es legible y sus datos cuadran, pero no es apta para financiamiento."
+                },
+                "approved": {
+                    "automatic": "Paso 4 de 5 · la factura fue aprobada y está lista para salir a subasta.",
+                    "attention": "Paso 4 de 5 · revisa la oferta y acéptala para publicar la factura."
+                },
+                "inAuction": {
+                    "automatic": "Paso 5 de 5 · la factura está publicada en la subasta.",
+                    "attention": "Parada en el paso 5 de 5 · esto no avanza solo: hace falta que alguien lo corrija."
+                }
+            },
+            "facts": {
+                "title": "Datos que leímos de la factura",
+                "unread": "—",
+                "issuer": "Emisor",
+                "issuerRuc": "RUC del emisor",
+                "payer": "Pagador",
+                "payerRuc": "RUC del pagador",
+                "issuedAt": "Emitida",
+                "dueDate": "Vence",
+                "currency": "Moneda",
+                "fiscalNumber": "Número fiscal"
+            },
+            "settlement": {
+                "grossAmount": "Importe de la factura",
+                "pendingFootnote": "Sabrás cuánto recibes cuando la factura esté aprobada y salga a subasta: el descuento y la comisión se fijan ahí."
+            },
+            "lineItems": {
+                "title": "Detalle de la factura",
+                "description": "Descripción",
+                "quantity": "Cantidad",
+                "unitPrice": "Precio unitario",
+                "subtotal": "Subtotal"
+            },
+            "totals": {
+                "subtotal": "Subtotal",
+                "igv": "IGV (18 %)",
+                "commercialDiscount": "Descuento comercial",
+                "total": "Total"
+            }
+        },
+        "errors": {
+            "uploadFailed": "No pudimos subir la factura. Inténtalo de nuevo."
+        }
+    },
+    "home": {
+        "title": "Sesión iniciada",
+        "signedInAs": "Entraste como <strong>{{email}}</strong>.",
+        "roles": "Roles",
+        "expiresAt": "La sesión caduca",
+        "placeholder": "Pantalla provisional. El panel de la MYPE llega cuando se diseñen facturas, perfil y billetera."
+    },
+    "notFound": {
+        "code": "Error 404",
+        "title": "Esta página no existe",
+        "body": "Puede que el enlace esté mal escrito o que la página se haya movido.",
+        "back": "Volver al inicio"
+    },
+    "investment": {
+        "offer": {
+            "invoiceAmount": "Importe de la factura",
+            "discount": "Descuento ({{percentage}} %)",
+            "net": "Neto",
+            "fee": "Comisión Vankoo (incl. IGV)",
+            "receivable": "Recibes",
+            "terms": "TCEA {{tcea}} % · {{days}} días · válida hasta el {{validUntil}}",
+            "accept": "Aceptar y publicar",
+            "accepting": "Publicando…",
+            "publishedOn": "Publicada el {{date}}",
+            "funded": "Financiado {{current}} de {{target}}",
+            "dialog": {
+                "title": "¿Aceptar la oferta y publicar la factura?",
+                "body": "Recibirás {{amount}} en tu billetera cuando la subasta se financie. Al aceptar, la factura se publica para los inversionistas y ya no se puede retirar desde aquí.",
+                "confirm": "Sí, publicar",
+                "cancel": "Cancelar"
+            }
+        },
+        "errors": {
+            "quoteNotActive": "Esta oferta ya no está vigente. Te mostramos la actual.",
+            "tooCloseToDueDate": "La factura vence demasiado pronto para abrir una subasta.",
+            "unknown": "No pudimos completar la operación. Inténtalo de nuevo."
+        }
+    }
+}

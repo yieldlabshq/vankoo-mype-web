@@ -1,0 +1,251 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@import "@fontsource-variable/plus-jakarta-sans";
+/* latin-only: the full entrypoints also ship devanagari, ~130 kB nobody here reads. */
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-700.css";
+
+@import "./styles/tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    /* Typography. Poppins is the brand voice and lives only in the logo and
+       landing headlines; everything inside the product is Plus Jakarta Sans. */
+    --font-sans: var(--vk-family-app);
+    --font-display: var(--vk-family-display);
+    --font-heading: var(--font-sans);
+
+    --font-weight-regular: var(--vk-weight-regular);
+    --font-weight-medium: var(--vk-weight-medium);
+    --font-weight-semibold: var(--vk-weight-semibold);
+    --font-weight-bold: var(--vk-weight-bold);
+    --font-weight-extrabold: var(--vk-weight-extrabold);
+
+    /* Type ramp. Sizes come from the Density collection, so they rescale at
+       the md breakpoint without any component knowing about it. */
+    --text-display: var(--vk-text-display-size);
+    --text-display--line-height: var(--vk-text-display-lh);
+    /* Landing/Hero shares the display size but tightens tracking to -2%;
+       it gets its own token so a money figure and a headline stay distinct. */
+    --text-hero: var(--vk-text-display-size);
+    --text-hero--line-height: var(--vk-text-display-lh);
+    --text-hero--letter-spacing: -0.02em;
+    --text-h1: var(--vk-text-h1-size);
+    --text-h1--line-height: var(--vk-text-h1-lh);
+    --text-h2: var(--vk-text-h2-size);
+    --text-h2--line-height: var(--vk-text-h2-lh);
+    --text-h3: var(--vk-text-h3-size);
+    --text-h3--line-height: var(--vk-text-h3-lh);
+    --text-body-lg: var(--vk-text-body-lg-size);
+    --text-body-lg--line-height: var(--vk-text-body-lg-lh);
+    --text-body: var(--vk-text-body-size);
+    --text-body--line-height: var(--vk-text-body-lh);
+    --text-caption: var(--vk-text-caption-size);
+    --text-caption--line-height: var(--vk-text-caption-lh);
+    --text-overline: var(--vk-text-overline-size);
+    --text-overline--line-height: var(--vk-text-overline-lh);
+    /* +8% tracking, from App/Overline. The uppercasing stays a utility
+       (text-transform is not part of a type scale in CSS either). */
+    --text-overline--letter-spacing: 0.08em;
+
+    /* Elevation, so a card can say shadow-elevation-1 instead of a literal. */
+    --shadow-elevation-1: var(--vk-elevation-1);
+    --shadow-elevation-2: var(--vk-elevation-2);
+    --shadow-elevation-3: var(--vk-elevation-3);
+
+    /* Radii: the exact Figma scale, not shadcn's derived multiples. */
+    --radius-sm: var(--vk-radius-sm);
+    --radius-md: var(--vk-radius-md);
+    --radius-lg: var(--vk-radius-lg);
+    --radius-xl: var(--vk-radius-xl);
+
+    /* --- shadcn's palette, pointed at Vankoo tokens --- */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+
+    /* --- Vankoo semantics that shadcn has no slot for --- */
+    --color-surface: var(--vk-surface-base);
+    --color-surface-raised: var(--vk-surface-raised);
+    --color-surface-sunken: var(--vk-surface-sunken);
+    --color-surface-inverse: var(--vk-surface-inverse);
+
+    --color-fg: var(--vk-text-primary);
+    --color-fg-secondary: var(--vk-text-secondary);
+    --color-fg-muted: var(--vk-text-muted);
+    --color-fg-disabled: var(--vk-text-disabled);
+    --color-fg-inverse: var(--vk-text-inverse);
+    --color-fg-on-inverse: var(--vk-text-secondary-on-inverse);
+    --color-fg-link: var(--vk-text-link);
+
+    --color-border-subtle: var(--vk-border-subtle);
+    --color-border-strong: var(--vk-border-strong);
+
+    --color-success: var(--vk-state-success-fg);
+    --color-success-bg: var(--vk-state-success-bg);
+    --color-warning: var(--vk-state-warning-fg);
+    --color-warning-bg: var(--vk-state-warning-bg);
+    --color-error: var(--vk-state-error-fg);
+    --color-error-bg: var(--vk-state-error-bg);
+
+    /* Money in and money out. Deliberately separate from success/error:
+       "+S/ 850" is cash flow, "Approved" is a state. */
+    --color-positive: var(--vk-finance-positive-fg);
+    --color-negative: var(--vk-finance-negative-fg);
+    --color-neutral-amount: var(--vk-finance-neutral-fg);
+    --color-positive-on-inverse: var(--vk-finance-positive-on-inverse);
+    --color-negative-on-inverse: var(--vk-finance-negative-on-inverse);
+
+    --color-ai: var(--vk-accent-ai-fg);
+    --color-ai-bg: var(--vk-accent-ai-bg);
+    --color-ai-border: var(--vk-accent-ai-border);
+    --color-green-finance: var(--vk-accent-green-finance-fg);
+    --color-green-finance-bg: var(--vk-accent-green-finance-bg);
+
+    --color-avatar: var(--vk-avatar-fg);
+    --color-avatar-bg: var(--vk-avatar-bg);
+
+    --color-decor-panel-from: var(--vk-decor-panel-from);
+    --color-decor-panel-to: var(--vk-decor-panel-to);
+    --color-decor-panel-fg: var(--vk-decor-panel-fg);
+    --color-decor-light: var(--vk-decor-light-primary);
+    --color-decor-light-2: var(--vk-decor-light-secondary);
+    --color-decor-dot: var(--vk-decor-dot);
+
+    --color-risk-a: var(--vk-risk-a-fg);
+    --color-risk-a-bg: var(--vk-risk-a-bg);
+    --color-risk-b: var(--vk-risk-b-fg);
+    --color-risk-b-bg: var(--vk-risk-b-bg);
+    --color-risk-c: var(--vk-risk-c-fg);
+    --color-risk-c-bg: var(--vk-risk-c-bg);
+
+    /* Invoice status: the eleven values of InvoiceStatus in the Invoicing
+       service. The name is the enum value in kebab-case, so the mapping
+       between design, code and backend is direct. */
+    --color-status-uploaded: var(--vk-status-uploaded-fg);
+    --color-status-uploaded-bg: var(--vk-status-uploaded-bg);
+    --color-status-ocr-processing: var(--vk-status-ocr-processing-fg);
+    --color-status-ocr-processing-bg: var(--vk-status-ocr-processing-bg);
+    --color-status-data-extracted: var(--vk-status-data-extracted-fg);
+    --color-status-data-extracted-bg: var(--vk-status-data-extracted-bg);
+    --color-status-consistency-passed: var(--vk-status-consistency-passed-fg);
+    --color-status-consistency-passed-bg: var(--vk-status-consistency-passed-bg);
+    --color-status-sunat-validating: var(--vk-status-sunat-validating-fg);
+    --color-status-sunat-validating-bg: var(--vk-status-sunat-validating-bg);
+    --color-status-sunat-validated: var(--vk-status-sunat-validated-fg);
+    --color-status-sunat-validated-bg: var(--vk-status-sunat-validated-bg);
+    --color-status-approved: var(--vk-status-approved-fg);
+    --color-status-approved-bg: var(--vk-status-approved-bg);
+    --color-status-published: var(--vk-status-published-fg);
+    --color-status-published-bg: var(--vk-status-published-bg);
+    --color-status-requires-review: var(--vk-status-requires-review-fg);
+    --color-status-requires-review-bg: var(--vk-status-requires-review-bg);
+    --color-status-not-eligible: var(--vk-status-not-eligible-fg);
+    --color-status-not-eligible-bg: var(--vk-status-not-eligible-bg);
+    --color-status-rejected: var(--vk-status-rejected-fg);
+    --color-status-rejected-bg: var(--vk-status-rejected-bg);
+}
+
+/* shadcn's palette bridged onto Vankoo tokens.
+   This block is NOT duplicated under .dark on purpose: every value points at
+   a --vk-* token, and those already flip in tokens.css. One mapping, two themes. */
+:root {
+    --background: var(--vk-surface-base);
+    --foreground: var(--vk-text-primary);
+    --card: var(--vk-surface-raised);
+    --card-foreground: var(--vk-text-primary);
+    --popover: var(--vk-surface-overlay);
+    --popover-foreground: var(--vk-text-primary);
+
+    /* Brand green fill with a navy label — never white on green (2.16:1). */
+    --primary: var(--vk-action-primary-bg);
+    --primary-foreground: var(--vk-action-primary-fg);
+    --secondary: var(--vk-action-secondary-bg);
+    --secondary-foreground: var(--vk-action-secondary-fg);
+
+    --muted: var(--vk-surface-sunken);
+    --muted-foreground: var(--vk-text-muted);
+    --accent: var(--vk-action-ghost-bg-hover);
+    --accent-foreground: var(--vk-action-ghost-fg);
+    --destructive: var(--vk-action-danger-bg);
+
+    --border: var(--vk-border-subtle);
+    /* Input borders need 3:1, so they use border/strong, not border/subtle. */
+    --input: var(--vk-border-strong);
+    --ring: var(--vk-border-focus);
+
+    --radius: var(--vk-radius-lg);
+
+    /* Charts: brand colours rather than shadcn's greys, so a chart sits in
+       the product instead of next to it. */
+    --chart-1: var(--vk-green-400);
+    --chart-2: var(--vk-indigo-600);
+    --chart-3: var(--vk-amber-400);
+    --chart-4: var(--vk-navy-600);
+    --chart-5: var(--vk-red-500);
+
+    /* The sidebar is the navy surface from the mockups. */
+    --sidebar: var(--vk-surface-inverse);
+    --sidebar-foreground: var(--vk-text-inverse);
+    --sidebar-primary: var(--vk-action-primary-bg);
+    --sidebar-primary-foreground: var(--vk-action-primary-fg);
+    --sidebar-accent: var(--vk-action-secondary-bg-hover);
+    --sidebar-accent-foreground: var(--vk-text-inverse);
+    --sidebar-border: var(--vk-navy-800);
+    --sidebar-ring: var(--vk-border-focus);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-size: var(--vk-text-body-size);
+        line-height: var(--vk-text-body-lh);
+    }
+    html {
+        @apply font-sans;
+    }
+    /* What the browser paints for itself: scrollbars, the autofill wash over an
+       input, a date picker. Without this they stay light over the dark palette,
+       and no token can reach them. */
+    :root {
+        color-scheme: light;
+    }
+    :root.dark {
+        color-scheme: dark;
+    }
+}
